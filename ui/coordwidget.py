@@ -20,6 +20,6 @@ class CoordWidget(QWidget):
         self.ui.pushButton.clicked.connect(self.press_del)
 
     @Slot()
-    # вызывается при нажатии на кнопку удаления
+    # вызывается при нажатии на кнопку удаления и передаем инт значение в main
     def press_del(self):
         self.delete.emit(self.id_widget)
