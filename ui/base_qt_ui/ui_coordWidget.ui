@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>543</width>
+    <width>537</width>
     <height>121</height>
    </rect>
   </property>
@@ -121,8 +121,8 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../res.qrc">
-          <normaloff>:/icon/del.svg</normaloff>:/icon/del.svg</iconset>
+         <iconset resource="../../res.qrc">
+          <normaloff>:/icon/del.png</normaloff>:/icon/del.png</iconset>
         </property>
        </widget>
       </item>
@@ -132,7 +132,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../res.qrc"/>
+  <include location="../../res.qrc"/>
  </resources>
  <connections/>
 </ui>

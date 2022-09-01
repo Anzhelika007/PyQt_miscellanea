@@ -24,7 +24,7 @@ class Ui_CoordWidget(object):
     def setupUi(self, CoordWidget):
         if not CoordWidget.objectName():
             CoordWidget.setObjectName(u"CoordWidget")
-        CoordWidget.resize(543, 121)
+        CoordWidget.resize(537, 121)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -89,7 +89,7 @@ class Ui_CoordWidget(object):
         self.pushButton.setSizePolicy(sizePolicy3)
         self.pushButton.setMinimumSize(QSize(40, 40))
         icon = QIcon()
-        icon.addFile(u":/icon/del.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icon/del.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton.setIcon(icon)
 
         self.horizontalLayout.addWidget(self.pushButton)

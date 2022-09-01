@@ -3,6 +3,7 @@ from PySide6.QtCore import Slot, Signal
 
 from ui.base_qt_ui.ui_coordWidget import Ui_CoordWidget
 
+
 # наследует от типа объекта (QWidget)
 class CoordWidget(QWidget):
     # пробрасываем сигнал удаления (если кнопка нажата- виджет удалится, передаем интовское значение!!!)
