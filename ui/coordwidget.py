@@ -24,3 +24,4 @@ class CoordWidget(QWidget):
     # вызывается при нажатии на кнопку удаления и передаем инт значение в main
     def press_del(self):
         self.delete.emit(self.id_widget)
+
