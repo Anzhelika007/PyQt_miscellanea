@@ -20,15 +20,15 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QMenuBar, QPushButton,
     QWidget)
 
 class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(596, 601)
+    def setupUi(self,QMainWindow):
+        if not QMainWindow.objectName():
+            QMainWindow.setObjectName(u"MainWindow")
+        QMainWindow.resize(596, 601)
         font = QFont()
         font.setPointSize(18)
         font.setBold(True)
-        MainWindow.setFont(font)
-        self.centralwidget = QWidget(MainWindow)
+        QMainWindow.setFont(font)
+        self.centralwidget = QWidget(QMainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -60,22 +60,22 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.clear_pushButton)
 
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QMenuBar(MainWindow)
+        QMainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(QMainWindow)
         self.menubar.setObjectName(u"menubar")
         self.menubar.setGeometry(QRect(0, 0, 596, 47))
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QStatusBar(MainWindow)
+        QMainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(QMainWindow)
         self.statusbar.setObjectName(u"statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        QMainWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(QMainWindow)
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(QMainWindow)
     # setupUi
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u0428\u0430\u0439\u0442\u0430\u043d \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435", None))
+    def retranslateUi(self, QMainWindow):
+        QMainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u0428\u0430\u0439\u0442\u0430\u043d \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435", None))
         self.add_pushButton.setText(QCoreApplication.translate("MainWindow", u"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c", None))
         self.clear_pushButton.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0447\u0438\u0441\u0442\u0438\u0442\u044c", None))
     # retranslateUi

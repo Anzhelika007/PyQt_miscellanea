@@ -4,7 +4,7 @@ from ui.mainwindow import MainWindow
 
 
 if __name__ == '__main__':
-    app = QApplication
+    app = QApplication()
     window = MainWindow()
     window.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
