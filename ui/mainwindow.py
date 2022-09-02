@@ -17,10 +17,10 @@ class MainWindow(QMainWindow):
         self.counter_id: int = 0
 
         #---------------------------------------------
-        # создаем переменную с классом
+        # создаем переменную с отрисованным классом
         self.flowlaout = FlowLayout()
-
-
+        # добавляем на главное окно вручную отрисованный layout
+        self.ui.coordWidget_layout.addLayout(self.flowlaout)
         #----------------------------------------------
 
 
@@ -36,7 +36,7 @@ class MainWindow(QMainWindow):
         # создаем экземпляр класса виджета координат (второго!) и присваиваем id
         coord_widget = CoordWidget(self.counter_id)
         # добавляем на наше основное окно
-        self.ui.coordWidget_layout.addWidget(coord_widget)
+        self.flowlaout.addWidget(coord_widget)
         # связали сигнал со слотом кнопки удалить
         coord_widget.delete.connect(self.delete_coordwidget)
 
@@ -44,9 +44,9 @@ class MainWindow(QMainWindow):
     @Slot()
     # 2 слот - отвечает за очистку окна от всех виджетов координат
     def clear_area(self):
-        while self.ui.coordWidget_layout.count() > 0:
+        while self.flowlaout.count() > 0:
             # пробежались по всем виджетам получили ссылку и удалили
-            item = self.ui.coordWidget_layout.takeAt(0)
+            item = self.flowlaout.takeAt(0)
             item.widget().deleteLater()
 
     @Slot(int)
@@ -54,5 +54,5 @@ class MainWindow(QMainWindow):
     def delete_coordwidget(self, wid: int):
         print(f'Удаляемый виджет с id: {wid}')
         widget = self.sender()
-        self.ui.coordWidget_layout.removeWidget(widget)
+        self.flowlaout.removeWidget(widget)
         widget.deleteLater()

@@ -1,5 +1,6 @@
 import PySide6
 from PySide6.QtCore import QSize, QRect, QPoint
+from PySide6.QtGui import Qt
 from PySide6.QtWidgets import QLayout
 
 
@@ -48,7 +49,7 @@ class FlowLayout(QLayout):
         return self.minimumSize()
 
     def minimumSize(self) -> PySide6.QtCore.QSize:
-        size = QSize
+        size = QSize()
         for item in self.items_list:
             size = size.expandedTo(item.minimumSize())
 
@@ -71,7 +72,7 @@ class FlowLayout(QLayout):
                 next_x = x + item.sizeHint().width() + space_x
                 line_height = 0
 
-            item.setGeometry(QRect(QPoint(x, y), item.sizeHint().height()))
+            item.setGeometry(QRect(QPoint(x, y), item.sizeHint()))
 
             x = next_x
             line_height = max(line_height, item.sizeHint().height())
