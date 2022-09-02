@@ -3,7 +3,8 @@ from PySide6.QtCore import Slot
 
 from ui.base_qt_ui.ui_mainWindow import Ui_MainWindow
 from ui.coordwidget import CoordWidget
-
+# второй рукописный
+from ui.flowlayout import FlowLayout
 
 # тип главного объекта QMainWindow - его наследуем
 class MainWindow(QMainWindow):
@@ -14,6 +15,14 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         # переменная класса экземпляра интовского типа, которая при добавлении виджета лойаута будет увеличиваться и добавлять id каждому виджету
         self.counter_id: int = 0
+
+        #---------------------------------------------
+        # создаем переменную с классом
+        self.flowlaout = FlowLayout()
+
+
+        #----------------------------------------------
+
 
         # связываем кнопки со слотами
         self.ui.add_pushButton.clicked.connect(self.add_coordwidget)

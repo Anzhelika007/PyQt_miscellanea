@@ -25,7 +25,7 @@ class Ui_CoordWidget(object):
         if not CoordWidget.objectName():
             CoordWidget.setObjectName(u"CoordWidget")
         CoordWidget.resize(537, 121)
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(CoordWidget.sizePolicy().hasHeightForWidth())
